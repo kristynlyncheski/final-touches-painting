@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A brief description of your website for SEO.">
+  <meta name="author" content="Your Name">
+  <title>TLH Painting</title>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font and Icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha384-somehash" crossorigin="anonymous"> -->
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="nav-left">
+      <div class="logo">TLH PAINTING</div>
+      <nav>
+        <ul>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#recent-work">Recent Work</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button>Contact Us</button>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div id="hero">
+      <div class="hero-content">
+        <h1>Flawless Finishes, Every Time</h1>
+        <p>Professional painting services that bring your vision to life. From precise finishes to vibrant transformations, we make your space shine.</p>
+        <button>Schedule An Estimate</button>
+      </div>
+    </div>
+
+    <section id="about-us" class="section-center">
+      <div class="section-content">
+        <h2>About Us</h2>
+        <p>Details about your website or business.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section-center">
+      <div class="section-content">
+        <h2>Our Services</h2>
+        <div class="service-items-container">
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>Interior Painting</h3>
+          </div>
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>Exterior Painting</h3>
+          </div>
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>New Construction</h3>
+          </div>
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>Pressure Washing</h3>
+          </div>
+        </div>
+        <!-- <button>View All Services</button> -->
+      </div>
+    </section>
+
+    <section id="recent-work" class="section-center">
+      <div class="section-content">
+        <h2>Recent Work</h2>
+        <div class="slideshow">
+          <div class="large-image-container">
+            <button class="arrow left-arrow" onclick="prevSlide()">&#9664;</button>
+            <img id="largeImage" src="assets/image1.jpg" alt="Large Display">
+            <button class="arrow right-arrow" onclick="nextSlide()">&#9654;</button>
+          </div>
+          <div class="thumbnail-container">
+            <img class="thumbnail" src="assets/image2.jpg" alt="Thumbnail 1" onclick="setSlide(1)">
+            <img class="thumbnail" src="assets/image3.jpg" alt="Thumbnail 2" onclick="setSlide(2)">
+            <img class="thumbnail" src="assets/image1.jpg" alt="Thumbnail 3" onclick="setSlide(3)">
+            <img class="thumbnail" src="assets/image2.jpg" alt="Thumbnail 4" onclick="setSlide(4)">
+            <img class="thumbnail" src="assets/image3.jpg" alt="Thumbnail 5" onclick="setSlide(5)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="book">
+      <div class="section-content">
+        <img src="assets/bio.png" />
+        <div class="content-wrapper">
+          <h2>Book on Task Rabbit</h2>
+          <p>Hi, I'm TJ, your go-to painter for transforming your space! Whether you're looking to refresh a single room, touch up details, or give your entire home a new look, I bring precision, efficiency, and a keen eye for detail to every project.</p>
+          <p>With experience in interior painting, I ensure clean lines, smooth finishes, and a stress-free process from
+          start to finish. I take pride in delivering high-quality results tailored to your vision.</p>
+          <p>Let's work together to create a space you’ll love. Book me today to get started!</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="logo logo-invert">TLH PAINTING</div>
+    <ul>
+      <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    <p>&copy; 2024 TLH Painting. All Rights Reserved.</p>
+  </footer>
+
+    <script src="https://kit.fontawesome.com/596f2c703c.js" crossorigin="anonymous"></script>
+    <script>
+      const images = [
+        "assets/image1.jpg",
+        "assets/image2.jpg",
+        "assets/image3.jpg",
+        "assets/image1.jpg",
+        "assets/image2.jpg",
+        "assets/image3.jpg",
+      ];
+      let currentIndex = 0;
+
+      const largeImage = document.getElementById("largeImage");
+      const thumbnails = document.querySelectorAll(".thumbnail");
+
+      function updateSlide(index) {
+      // Update large image
+      largeImage.src = images[index];
+      // Highlight active thumbnail
+      thumbnails.forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === index);
+      });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlide(currentIndex);
+      }
+
+      function setSlide(index) {
+        currentIndex = index;
+        updateSlide(currentIndex);
+      }
+
+      // Initialize the slideshow
+      updateSlide(currentIndex);
+    </script>
+</body>
+</html>
