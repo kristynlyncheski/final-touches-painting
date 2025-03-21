@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A brief description of your website for SEO.">
+  <meta name="author" content="Your Name">
+  <title>Final Touches Painting</title>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Font and Icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha384-somehash" crossorigin="anonymous"> -->
+  <!-- CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="nav-left">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo" class="logo-image">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#recent-work">Recent Work</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button href="#contact">Contact Us</button>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div id="hero">
+      <div class="hero-content">
+        <h1>Flawless Finishes, Every Time</h1>
+        <p>Professional painting services that bring your vision to life. From precise finishes to vibrant transformations, we make your space shine.</p>
+        <button>Schedule An Estimate</button>
+      </div>
+    </div>
+
+    <section id="about-us" class="section-center">
+      <div class="section-content">
+        <h2>About Us</h2>
+        <p>Details about your website or business.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section-center">
+      <div class="section-content">
+        <h2>Our Services</h2>
+        <div class="service-items-container">
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>Interior Painting</h3>
+          </div>
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>Exterior Painting</h3>
+          </div>
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>New Construction</h3>
+          </div>
+          <div class="service-item">
+            <img src="assets/icon.png" />
+            <h3>Pressure Washing</h3>
+          </div>
+        </div>
+        <!-- <button>View All Services</button> -->
+      </div>
+    </section>
+
+    <section id="recent-work" class="section-center">
+      <div class="section-content">
+        <h2>Recent Work</h2>
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="assets/image1.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="assets/image2.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="assets/image3.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="thumbnail-carousel" class="splide"
+          aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="assets/image1.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="assets/image2.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="assets/image3.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-content">
+        <img src="assets/bio.png" />
+        <div class="content-wrapper">
+          <h2>Contact Us</h2>
+          <p>Hi, I'm Terry, your go-to painter for transforming your space! Whether you're looking to refresh a single room, touch up details, or give your entire home a new look, I bring precision, efficiency, and a keen eye for detail to every project.</p>
+          <p>With experience in residential painting, I ensure clean lines, smooth finishes, and a stress-free process from
+          start to finish. I take pride in delivering high-quality results tailored to your vision.</p>
+          <p>Let's work together to create a space you’ll love. Book me today to get started!</p>
+          <button>Contact Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="logo logo-invert">TLH PAINTING</div>
+    <ul>
+      <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    <p>&copy; 2024 TLH Painting. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/596f2c703c.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script>
+
+    // new Splide( '#image-carousel' ).mount();
+
+
+    // new Splide('#thumbnail-carousel', {
+    //   fixedWidth: 100,
+    //   fixedHeight: 60,
+    //   gap: 10,
+    //   rewind: true,
+    //   pagination: false,
+    //   isNavigation: true,
+    //   breakpoints: {
+    //     600: {
+    //       fixedWidth: 60,
+    //       fixedHeight: 44,
+    //     },
+    //   },
+    // }).mount();
+  </script>
+</body>
+</html>
